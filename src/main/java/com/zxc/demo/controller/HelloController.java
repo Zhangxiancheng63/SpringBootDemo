@@ -3,10 +3,13 @@ package com.zxc.demo.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
+import java.util.Map;
+
 @RestController
 public class HelloController {
     @RequestMapping("/")
-    public String index() {
-        return "Welcome to the Spring Boot's world!";
+    public Map<String, String> index() {
+        return Collections.singletonMap("name", "zxc");
     }
 }
